@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Stylr",
+  "version": "1.0",
+  "description": "Apply css styles to webpage.",
+  "browser_action": {
+    "default_title": "Stylr",
+    "default_popup": "ui.html"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery-3.3.1.min.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
+}
